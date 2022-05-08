@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="background">BackGround</string>
+    <string name="login">Login</string>
+    <string name="TypeYourPwd" />
+    <string name="add_payer">Add Payer</string>
+    <string name="descipci_n">Descipción:</string>
+    <string name="descipción" />
+    <string name="seleccionar_data">Seleccionar data</string>
 </resources>

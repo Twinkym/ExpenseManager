@@ -3,115 +3,85 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
 
     <Button
-        android:id="@+id/btn_Create"
+        android:id="@+id/register_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="@string/Create"
+        android:layout_marginEnd="152dp"
+        android:layout_marginBottom="120dp"
+        android:text="@string/register"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:text="Create" />
+        tools:text="Register" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/UserR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="@string/nameregister"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textInputEditText"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="Name:" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText"
-        android:layout_width="235dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="60dp"
         android:layout_marginEnd="16dp"
-        android:hint="@string/name"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:contentDescription="@string/avatar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ImageContrastCheck"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrier2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="end"
-        app:constraint_referenced_ids="textView4"
-        tools:layout_editor_absoluteX="16dp" />
+        android:text="@string/user"
+        android:textColor="#191717"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/input_username"
+        app:layout_constraintEnd_toStartOf="@+id/input_username"
+        tools:text="USER:" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress2"
-        android:layout_width="235dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="@string/Email"
-        android:inputType="textEmailAddress"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText" />
-
-    <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/input_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="@string/emailregister"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editTextTextEmailAddress2"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="100dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/e_mail"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="@string/username"
+        android:textColor="#757575"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Avatar"
         tools:text="E-MAIL" />
 
     <EditText
-        android:id="@+id/editTextPhone2"
-        android:layout_width="235dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
+        android:id="@+id/input_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="100dp"
         android:ems="10"
-        android:hint="@string/phone"
-        android:inputType="phone"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="@string/pwdR"
+        android:textColor="#B0171212"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2"
+        app:layout_constraintTop_toBottomOf="@+id/input_username"
         android:autofillHints="" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/PwdR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="@string/Phone"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editTextPhone2"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="PHONE:" />
+        android:layout_marginEnd="16dp"
+        android:text="@string/pwdRt"
+        android:textColor="#191717"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/input_pwd"
+        app:layout_constraintEnd_toStartOf="@+id/input_pwd" />
 
+    <ImageView
+        android:id="@+id/Avatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="156dp"
+        android:layout_marginEnd="140dp"
+        android:contentDescription="@string/avatarR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck"
+        tools:srcCompat="@tools:sample/avatars" />
 </androidx.constraintlayout.widget.ConstraintLayout>
