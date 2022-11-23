@@ -1,10 +1,12 @@
-package com.kirgo.expensemanager;
+package com.kirgo.expensemanager.ui;
 
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.kirgo.expensemanager.R;
 
 public class LoginActivity extends AppCompatActivity {
 
