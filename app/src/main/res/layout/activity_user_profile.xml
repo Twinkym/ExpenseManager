@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.kirgo.expensemanager.ui.UserProfileActivity">
+
+
+    <Button
+        android:id="@+id/Logout"
+        android:layout_width="148dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Logout" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="148dp"
+        android:layout_height="65dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Save" />
+
+    <TextView
+        android:id="@+id/txt_Name"
+        android:layout_width="89dp"
+        android:layout_height="25dp"
+        android:ems="10"
+        android:text="@string/name"
+        android:textColor="#0C0A0A"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/input_name"
+        app:layout_constraintStart_toStartOf="@+id/guideline2" />
+
+    <EditText
+        android:id="@+id/input_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="36dp"
+        android:ems="10"
+        android:hint="@string/type_your_name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/txt_Name"
+        app:layout_constraintTop_toBottomOf="@id/img_user"
+        android:autofillHints="Type your name..." />
+
+    <TextView
+        android:id="@+id/txt_Surname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/surname"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/input_surname"
+        app:layout_constraintEnd_toEndOf="@+id/txt_Name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txt_Name"
+        tools:text="Surname" />
+
+    <EditText
+        android:id="@+id/input_surname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/usersurname"
+        app:layout_constraintEnd_toEndOf="@+id/input_name"
+        app:layout_constraintTop_toBottomOf="@id/input_name"
+        android:autofillHints="Type you Surname..."
+        android:inputType="textPersonName" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/phone"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@id/txt_Surname"
+        app:layout_constraintTop_toBottomOf="@id/txt_Surname"
+        android:background="@color/cardview_dark_background"
+        app:srcCompat="@android:drawable/stat_sys_phone_call" />
+
+    <EditText
+        android:id="@+id/Edit_Pef_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/description"
+        app:layout_constraintEnd_toEndOf="@+id/input_name"
+        app:layout_constraintTop_toBottomOf="@id/phone"
+        android:autofillHints="Describe your Profile..."
+        android:inputType="textMultiLine" />
+
+    <TextView
+        android:id="@+id/DescripcionPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Edit_Pef_info"
+        app:layout_constraintStart_toStartOf="@id/phone"
+        tools:text="Describe yor profile: " />
+
+    <ImageView
+        android:id="@+id/img_user"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_edit_picture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/user_avatar"
+        android:contentDescription="@string/user_picture" />
+
+    <ImageButton
+        android:id="@+id/btn_edit_picture"
+        android:layout_width="29dp"
+        android:layout_height="35dp"
+        android:contentDescription="@string/editpicture"
+        app:layout_constraintBottom_toBottomOf="@+id/img_user"
+        app:layout_constraintEnd_toStartOf="@id/img_user"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

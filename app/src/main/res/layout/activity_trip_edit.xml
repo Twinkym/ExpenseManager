@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.kirgo.expensemanager.ui.TripEditActivity"
+    >
+
+    <TextView
+        android:id="@+id/Fecha"
+        android:layout_width="70dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:text="Fecha:"
+        android:textColor="#0C0808"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Descripción"></TextView>
+
+    <Button
+        android:id="@+id/btn_logutEt"
+        android:layout_width="148dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="36dp"
+        android:text="Guardar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        ></Button>
+
+    <TextView
+        android:id="@+id/Descripción"
+        android:layout_width="124dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="24dp"
+        android:text="@string/descipción"
+        android:textColor="#131010"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/input_username"
+        app:layout_constraintStart_toStartOf="parent"></TextView>
+
+    <EditText
+        android:id="@+id/input_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="308dp"
+        android:layout_marginEnd="28dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintTop_toTopOf="parent"></EditText>
+
+    <ImageView
+        android:id="@+id/image_trip"
+        android:layout_width="210dp"
+        android:layout_height="170dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/trip"></ImageView>
+
+    <Button
+        android:id="@+id/seleccionar_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/seleccionar_data"
+        app:layout_constraintStart_toEndOf="@id/Fecha"
+        app:layout_constraintTop_toBottomOf="@id/input_username"></Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

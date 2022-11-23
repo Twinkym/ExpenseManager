@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.kirgo.expensemanager.ui.TripViewActivity"
+    >
+    <TextView
+        android:id="@+id/txt_date"
+        android:layout_width="145dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/date"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toEndOf="@+id/img_trip"
+        app:layout_constraintTop_toBottomOf="@+id/txt_description"/>
+
+    <ImageView
+        android:id="@+id/img_trip"
+        android:layout_width="210dp"
+        android:layout_height="170dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/trip"
+        android:contentDescription="@string/img_trip"
+        />
+
+    <TextView
+        android:id="@+id/txt_description"
+        android:layout_width="149dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="68dp"
+        android:text="@string/description"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toEndOf="@id/img_trip"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btn_add_new_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_trip"
+        tools:text="New User" />
+
+    <ImageButton
+        android:id="@+id/btn_edit_img_trip"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/img_trip"
+        app:layout_constraintEnd_toEndOf="@id/img_trip"
+        app:srcCompat="@android:drawable/ic_menu_edit"
+        android:contentDescription="@string/btn_edit_img_trip"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/expense_list"
+        android:layout_width="395dp"
+        android:layout_height="337dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.562"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_add_new_user"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/user_list"
+        android:layout_width="210dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/expense_list"
+        app:layout_constraintEnd_toStartOf="@id/btn_add_new_user"
+        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_trip"
+        app:layout_constraintVertical_bias="0.0"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
